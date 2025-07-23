@@ -1,88 +1,50 @@
-y<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Amanfour Palace — Tamso’s Elite Barbershop</title>
+  <title>Amanfour Palace – Elite Barbershop</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Experience precision cuts & royal treatment at Amanfour Palace. Book in 3 seconds via WhatsApp. Tamso, Afuanta.">
+  <meta name="description" content="Luxury grooming on Tamso New Road, Tarkwa. Precision cuts, beard trims, colour & extensions. Book via WhatsApp in 3 seconds.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    :root{
-      --gold:#d4af37;
-      --black:#0e0e0e;
-      --white:#ffffff;
-      --glass:rgba(255,255,255,.08);
-    }
+    :root{--gold:#d4af37;--black:#0e0e0e;--white:#ffffff;--glass:rgba(255,255,255,.09)}
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    html{scroll-behavior:smooth}
-    body{background:var(--black);color:var(--white)}
-    ::-webkit-scrollbar{width:6px}
-    ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+    html{scroll-behavior:smooth}body{background:var(--black);color:var(--white)}
 
+    /* HERO – original background */
     .hero-wrapper{
-      position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;
+      position:relative;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;
+      background:url('https://i.postimg.cc/fWf2mywk/IMG-20250722-WA0027.jpg') center/cover fixed;
     }
-    .hero-wrapper video{
-      position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-2;
-    }
-    .hero-overlay{
-      position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,.4));z-index:-1;
-    }
-    .hero-content{z-index:2}
-    .hero-content h1{
-      font-size:clamp(2.8rem,7vw,5rem);font-weight:700;letter-spacing:2px;text-transform:uppercase;
-    }
-    .hero-content p{font-size:1.25rem;font-weight:300;margin:.5em 0 1.2em}
-    .cta-btn{
-      background:var(--gold);color:var(--black);border:none;padding:1em 2.5em;border-radius:50px;
-      font-weight:700;font-size:1rem;cursor:pointer;transition:.3s;
-    }
-    .cta-btn:hover{background:#c5a029;transform:translateY(-2px)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.4))}
+    .hero-content{position:relative;z-index:2}
+    .hero-content h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 15px var(--gold)}
+    .hero-content p{font-size:1.2rem;font-weight:300;margin:.5em 0 1.2em;text-shadow:0 0 8px var(--gold)}
+    .btn-hero{background:linear-gradient(135deg,var(--gold),#c5a029);color:var(--black);border:none;padding:1em 2.5em;border-radius:50px;font-weight:700;font-size:1rem;cursor:pointer;transition:.4s;box-shadow:0 0 20px var(--gold)}
 
-    nav{
-      position:fixed;top:0;width:100%;z-index:30;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:1rem 2rem;
-      background:var(--glass);backdrop-filter:saturate(180%) blur(20px);
-    }
-    .logo{font-weight:700;font-size:1.6rem;color:var(--gold)}
-    .nav-links a{margin-left:1.5rem;color:var(--white);text-decoration:none;font-weight:600;transition:.3s}
-    .nav-links a:hover{color:var(--gold)}
+    nav{position:fixed;top:0;width:100%;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:var(--glass);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--gold)}
+    .logo{font-weight:700;font-size:1.6rem;color:var(--gold)}.nav-links a{margin-left:1.5rem;color:var(--white);text-decoration:none;font-weight:600}.nav-links a:hover{color:var(--gold)}
 
-    #gallery{padding:6rem 2rem}
-    #gallery h2{
-      text-align:center;font-size:2.4rem;color:var(--gold);margin-bottom:3rem;
-    }
-    .grid{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));grid-auto-rows:260px;gap:.75rem;
-    }
-    .grid img{
-      width:100%;height:100%;object-fit:cover;border-radius:12px;transition:transform .4s;
-    }
-    .grid img:hover{transform:scale(1.05)}
-    @media(min-width:768px){
-      .grid img:nth-child(1){grid-column:span 2;grid-row:span 2}
-      .grid img:nth-child(5){grid-column:span 2}
-    }
+    section{padding:5rem 2rem;max-width:1200px;margin:auto}
+    h2{text-align:center;font-size:2.6rem;color:var(--gold);margin-bottom:2.5rem;text-shadow:0 0 10px var(--gold)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+    .gallery-grid img{width:100%;border-radius:12px;box-shadow:0 0 15px var(--gold);transition:.4s}
+    .gallery-grid img:hover{transform:scale(1.08) rotate(-1deg)}
 
-    #booking{
-      background:linear-gradient(135deg,#0e0e0e 60%,#111 100%);
-      padding:5rem 1.5rem;text-align:center;
-    }
-    #booking h2{font-size:2.4rem;color:var(--gold);margin-bottom:1rem}
-    #booking p{max-width:600px;margin:0 auto 1.5rem;font-size:1.1rem;font-weight:300}
-    .share-prompt{
-      margin-top:2.5rem;padding:1.5rem;border:1px solid var(--gold);border-radius:12px;max-width:400px;margin-inline:auto;
-    }
-    .share-prompt h3{color:var(--gold);margin-bottom:.5rem;font-size:1.1rem}
-    .share-prompt button{
-      background:transparent;color:var(--gold);border:1px solid var(--gold);padding:.6em 1.2em;border-radius:25px;
-      font-weight:600;cursor:pointer;transition:.3s;margin-top:.5rem;
-    }
-    .share-prompt button:hover{background:var(--gold);color:var(--black)}
+    .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .service-card{background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--gold);border-radius:16px;padding:2.2rem 1.5rem;text-align:center;transition:.4s;box-shadow:0 0 12px rgba(212,175,55,.4)}
+    .service-card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 0 25px var(--gold)}
+    .service-card h3{color:var(--gold);margin-bottom:.5rem;font-size:1.4rem;text-shadow:0 0 8px var(--gold)}
+    .service-card p{font-size:1.2rem;font-weight:600;margin-bottom:1rem}
+    .btn-book{background:linear-gradient(135deg,var(--gold),#c5a029);color:var(--black);border:none;padding:.7em 1.4em;border-radius:24px;font-weight:700;font-size:.9rem;cursor:pointer;transition:.3s}
 
-    footer{background:var(--black);text-align:center;padding:1.5rem;color:var(--gold);font-size:.85rem}
+    .hours-list{list-style:none;font-size:1.3rem;text-align:center}
+    .why-list{list-style:none;font-size:1.2rem;line-height:1.8;max-width:700px;margin:auto}
+    .sticky-cta{position:fixed;bottom:1rem;right:1rem;z-index:50}
+    .sticky-cta .btn-cta{background:linear-gradient(135deg,var(--gold),#c5a029);color:var(--black);border:none;padding:.8rem 1.5em;border-radius:24px;font-weight:700;font-size:.9rem;cursor:pointer;box-shadow:0 0 15px var(--gold);animation:pulse 2s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,175,55,.7)}70%{box-shadow:0 0 0 10px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
+    footer{background:var(--black);text-align:center;padding:2rem;color:var(--gold);font-size:.9rem}
   </style>
 </head>
 
@@ -91,74 +53,117 @@ y<!DOCTYPE html>
     <div class="logo">Amanfour Palace</div>
     <div class="nav-links">
       <a href="#gallery">Gallery</a>
-      <a href="#booking">Book</a>
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#why">Why Us</a>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero-wrapper">
-    <video autoplay muted loop playsinline poster="https://i.postimg.cc/fWf2mywk/IMG-20250722-WA0027.jpg">
-      <source src="https://cdn.coverr.co/videos/coverr-barber-cutting-hair-6759/1080p.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content" data-aos="zoom-in">
+    <div class="hero-content" data-aos="fade-up">
       <h1>Amanfour Palace</h1>
-      <p>Where Precision Meets Royalty — Tamso, Afuanta</p>
-      <button class="cta-btn" onclick="trackAndBook()">Book in 3 Seconds</button>
+      <p>📍 Tamso New Road, Tarkwa</p>
+      <a class="btn-hero" href="https://www.google.com/maps/search/Tamso+New+Road+Tarkwa" target="_blank">📍 Get Directions</a>
     </div>
   </section>
 
+  <!-- GALLERY – 9 original images -->
   <section id="gallery">
-    <h2 data-aos="fade-up">See the Craft</h2>
-    <div class="grid">
-      <img data-aos="zoom-in" src="https://i.postimg.cc/fWf2mywk/IMG-20250722-WA0027.jpg" alt="">
-      <img data-aos="zoom-in" data-aos-delay="100" src="https://i.postimg.cc/vT0tj1Bz/IMG-20250722-WA0025.jpg" alt="">
-      <img data-aos="zoom-in" data-aos-delay="200" src="https://i.postimg.cc/tCmzNV8R/IMG-20250722-WA0024.jpg" alt="">
-      <img data-aos="zoom-in" data-aos-delay="300" src="https://i.postimg.cc/vHjWVw6c/IMG-20250722-WA0022.jpg" alt="">
-      <img data-aos="zoom-in" data-aos-delay="400" src="https://i.postimg.cc/g0b8gysp/IMG-20250722-WA0021.jpg" alt="">
-      <img data-aos="zoom-in" data-aos-delay="500" src="https://i.postimg.cc/JzZBHDL2/IMG-20250722-WA0013.jpg" alt="">
-      <img data-aos="zoom-in" data-aos-delay="600" src="https://i.postimg.cc/pTwmdRSH/IMG-20250722-WA0008.jpg" alt="">
-      <img data-aos="zoom-in" data-aos-delay="700" src="https://i.postimg.cc/N0Gmhs3C/IMG-20250722-WA0009.jpg" alt="">
-      <img data-aos="zoom-in" data-aos-delay="800" src="https://i.postimg.cc/XNtfZ05X/IMG-20250722-WA0011.jpg" alt="">
+    <h2 data-aos="fade-up">Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://i.postimg.cc/fWf2mywk/IMG-20250722-WA0027.jpg" data-aos="zoom-in" alt="1">
+      <img src="https://i.postimg.cc/vT0tj1Bz/IMG-20250722-WA0025.jpg" data-aos="zoom-in" data-aos-delay="100" alt="2">
+      <img src="https://i.postimg.cc/tCmzNV8R/IMG-20250722-WA0024.jpg" data-aos="zoom-in" data-aos-delay="200" alt="3">
+      <img src="https://i.postimg.cc/vHjWVw6c/IMG-20250722-WA0022.jpg" data-aos="zoom-in" data-aos-delay="300" alt="4">
+      <img src="https://i.postimg.cc/g0b8gysp/IMG-20250722-WA0021.jpg" data-aos="zoom-in" data-aos-delay="400" alt="5">
+      <img src="https://i.postimg.cc/JzZBHDL2/IMG-20250722-WA0013.jpg" data-aos="zoom-in" data-aos-delay="500" alt="6">
+      <img src="https://i.postimg.cc/pTwmdRSH/IMG-20250722-WA0008.jpg" data-aos="zoom-in" data-aos-delay="600" alt="7">
+      <img src="https://i.postimg.cc/N0Gmhs3C/IMG-20250722-WA0009.jpg" data-aos="zoom-in" data-aos-delay="700" alt="8">
+      <img src="https://i.postimg.cc/XNtfZ05X/IMG-20250722-WA0011.jpg" data-aos="zoom-in" data-aos-delay="800" alt="9">
     </div>
   </section>
 
-  <section id="booking">
-    <h2 data-aos="fade-up">Ready to Look Sharp?</h2>
-    <p data-aos="fade-up" data-aos-delay="100">
-      Tap below, choose your slot and arrive looking like royalty.
-    </p>
-    <button class="cta-btn" data-aos="fade-up" data-aos-delay="200" onclick="trackAndBook()">Book via WhatsApp</button>
-
-    <div class="share-prompt" data-aos="fade-up" data-aos-delay="300">
-      <h3>Enjoyed the experience?</h3>
-      <button onclick="shareSite()">Share Page</button>
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 data-aos="fade-up">Our Services & Prices</h2>
+    <div class="service-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Regular Haircut</h3><p>GHS 100</p>
+        <a class="btn-book" href="https://wa.me/233550770772?text=Hi%20Amanfour%20Palace%2C%20I%20want%20a%20Regular%20Haircut%20(GHS%20100)%20—%20what%20time%20is%20available%3F">Book</a>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Beard Trim & Line Up</h3><p>GHS 80</p>
+        <a class="btn-book" href="https://wa.me/233550770772?text=Hi%20Amanfour%20Palace%2C%20I%20want%20Beard%20Trim%20(GHS%2080)%20—%20time%3F">Book</a>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Cut + Enhancement</h3><p>GHS 120</p>
+        <a class="btn-book" href="https://wa.me/233550770772?text=Hi%20Amanfour%20Palace%2C%20I%20want%20Cut%2BEnhancement%20(GHS%20120)%20—%20time%3F">Book</a>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <h3>Haircut with Texturizer</h3><p>GHS 180</p>
+        <a class="btn-book" href="https://wa.me/233550770772?text=Hi%20Amanfour%20Palace%2C%20I%20want%20Haircut%20%2B%20Texturizer%20(GHS%20180)%20—%20time%3F">Book</a>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+        <h3>Pixie Cut</h3><p>GHS 250</p>
+        <a class="btn-book" href="https://wa.me/233550770772?text=Hi%20Amanfour%20Palace%2C%20I%20want%20Pixie%20Cut%20(GHS%20250)%20—%20time%3F">Book</a>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+        <h3>Extensions</h3><p>GHS 500</p>
+        <a class="btn-book" href="https://wa.me/233550770772?text=Hi%20Amanfour%20Palace%2C%20I%20want%20Extensions%20(GHS%20500)%20—%20time%3F">Book</a>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+        <h3>Complete Colored Hair</h3><p>GHS 220</p>
+        <a class="btn-book" href="https://wa.me/233550770772?text=Hi%20Amanfour%20Palace%2C%20I%20want%20Complete%20Color%20(GHS%20220)%20—%20time%3F">Book</a>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+        <h3>Part-Colored Haircut</h3><p>GHS 180</p>
+        <a class="btn-book" href="https://wa.me/233550770772?text=Hi%20Amanfour%20Palace%2C%20I%20want%20Part%20Color%20(GHS%20180)%20—%20time%3F">Book</a>
+      </div>
     </div>
   </section>
 
-  <footer>
-    © 2025 Amanfour Barbers Palace – Website by George Nuyekpe
+  <!-- HOURS -->
+  <section id="hours">
+    <h2 data-aos="fade-up">Opening Hours</h2>
+    <ul class="hours-list" data-aos="fade-up"><li><strong>Open Daily 8:30 AM – 9:00 PM</strong></li></ul>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why">
+    <h2 data-aos="fade-up">Why Choose Amanfour Palace?</h2>
+    <ul class="why-list" data-aos="fade-up">
+      <li>✂️ Premium grooming experience</li>
+      <li>🧰 Skilled barbers using top-tier tools</li>
+      <li>🚶 Walk-ins welcome, bookings preferred</li>
+      <li>🏢 Clean, modern studio space</li>
+    </ul>
+  </section>
+
+  <!-- REFERRAL -->
+  <section style="text-align:center;padding:3rem 2rem">
+    <h2 data-aos="fade-up">Loved the experience?</h2>
+    <button class="btn-book" data-aos="fade-up" onclick="sharePage()">📤 Tell others on WhatsApp</button>
+  </section>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta">
+    <a class="btn-cta" href="https://wa.me/233550770772">💈 Book Now on WhatsApp</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer data-aos="fade-up">
+    Amanfour Palace | Tamso New Road, Tarkwa<br>
+    📱 +233 550 770 772<br>
+    Built by George Nuyekpe – All rights reserved
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({duration:800,once:true});
-
-    /* ========== TRACKING + BOOKING ========== */
-    function trackAndBook(){
-      // 1. Ping your WhatsApp with timestamp
-      const now = new Date().toLocaleString("en-GH");
-      const alertMsg = `🚨 New booking attempt on Amanfour Palace at ${now}`;
-      fetch(`https://wa.me/233541068437?text=${encodeURIComponent(alertMsg)}`, {mode:"no-cors"});
-
-      // 2. Open barber’s WhatsApp for the client
-      const clientMsg = "Hi Amanfour Palace 👑, I’d like to book a haircut.\n\nName:\nPreferred date & time:\nService:";
-      window.open(`https://wa.me/233550770772?text=${encodeURIComponent(clientMsg)}`, "_blank");
-    }
-
-    /* ========== SHARE BUTTON ========== */
-    function shareSite(){
-      const url = location.href;
-      const text = "Check out Amanfour Palace — the cleanest cuts in Tamso. Booking is instant via WhatsApp!";
+    function sharePage(){
+      const url = "https://amanfour.vercel.app";
+      const text = "Loved the experience? Tell others! Amanfour Palace – Tamso New Road, Tarkwa. Book via WhatsApp instantly!";
       const wa = `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`;
       window.open(wa, "_blank");
     }
