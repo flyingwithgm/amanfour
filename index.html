@@ -103,7 +103,7 @@
     <div class="hero-content" data-aos="zoom-in">
       <h1>Amanfour Palace</h1>
       <p>Where Precision Meets Royalty — Tamso, Afuanta</p>
-      <button class="cta-btn" onclick="book()">Book in 3 Seconds</button>
+      <button class="cta-btn" onclick="trackAndBook()">Book in 3 Seconds</button>
     </div>
   </section>
 
@@ -127,9 +127,8 @@
     <p data-aos="fade-up" data-aos-delay="100">
       Tap below, choose your slot and arrive looking like royalty.
     </p>
-    <button class="cta-btn" data-aos="fade-up" data-aos-delay="200" onclick="book()">Book via WhatsApp</button>
+    <button class="cta-btn" data-aos="fade-up" data-aos-delay="200" onclick="trackAndBook()">Book via WhatsApp</button>
 
-    <!-- SHARE BUTTON → OPENS WHATSAPP DIRECTLY -->
     <div class="share-prompt" data-aos="fade-up" data-aos-delay="300">
       <h3>Enjoyed the experience?</h3>
       <button onclick="shareSite()">Share Page</button>
@@ -137,21 +136,28 @@
   </section>
 
   <footer>
-    © 2025 Amanfour Barbers Palace – Website by George Nuyekpe
+    © 2024 Amanfour Barbers Palace – Website by George Nuyekpe
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({duration:800,once:true});
 
-    function book(){
-      const msg = "Hi Amanfour Palace 👑, I’d like to book a haircut.\n\nName:\nPreferred date & time:\nService (cut / fade / beard):\n\n(You can also send voice note)";
-      window.open(`https://wa.me/233550770772?text=${encodeURIComponent(msg)}`, '_blank');
+    /* ========== TRACKING + BOOKING ========== */
+    function trackAndBook(){
+      // 1. Ping your WhatsApp with timestamp
+      const now = new Date().toLocaleString("en-GH");
+      const alertMsg = `🚨 New booking attempt on Amanfour Palace at ${now}`;
+      fetch(`https://wa.me/233541068437?text=${encodeURIComponent(alertMsg)}`, {mode:"no-cors"});
+
+      // 2. Open barber’s WhatsApp for the client
+      const clientMsg = "Hi Amanfour Palace 👑, I’d like to book a haircut.\n\nName:\nPreferred date & time:\nService:";
+      window.open(`https://wa.me/233550770772?text=${encodeURIComponent(clientMsg)}`, "_blank");
     }
 
-    /* SHARE BUTTON → WHATSAPP DIRECT */
+    /* ========== SHARE BUTTON ========== */
     function shareSite(){
-      const url = "https://amanfour-palace.netlify.app";   // <— change to your live URL
+      const url = location.href;
       const text = "Check out Amanfour Palace — the cleanest cuts in Tamso. Booking is instant via WhatsApp!";
       const wa = `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`;
       window.open(wa, "_blank");
