@@ -12,7 +12,7 @@
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
     html{scroll-behavior:smooth}body{background:var(--black);color:var(--white);overflow-x:hidden}
 
-    .hero-wrapper{position:relative;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url('https://i.postimg.cc/fWf2mywk/IMG-20250722-WA0027.jpg') center/cover fixed;}
+    .hero-wrapper{position:relative;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url('IMG-20250722-WA0027.jpg') center/cover fixed;}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.4))}
     .hero-content{position:relative;z-index:2}
     .hero-content h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;letter-spacing:2px;text-transform:uppercase;text-shadow:0 0 15px var(--gold)}
@@ -45,22 +45,6 @@
 </head>
 
 <body>
-  <!-- floating particles -->
-  <div class="particle" style="width:2px;height:2px;top:10%;left:10%"></div>
-  <div class="particle" style="width:3px;height:3px;top:20%;left:70%"></div>
-  <div class="particle" style="width:2px;height:2px;top:60%;left:30%"></div>
-  <div class="particle" style="width:3px;height:3px;top:80%;left:80%"></div>
-
-  <nav>
-    <div class="logo">Amanfour Palace</div>
-    <div class="nav-links">
-      <a href="#gallery">Gallery</a>
-      <a href="#services">Services</a>
-      <a href="#hours">Hours</a>
-      <a href="#why">Why Us</a>
-    </div>
-  </nav>
-
   <!-- HERO -->
   <section class="hero-wrapper">
     <div class="hero-overlay"></div>
@@ -71,19 +55,33 @@
     </div>
   </section>
 
-  <!-- GALLERY – 9 original images -->
+  <!-- GALLERY – 23 exact images -->
   <section id="gallery">
     <h2 data-aos="fade-up">Gallery</h2>
     <div class="gallery-grid">
-      <img src="https://i.postimg.cc/fWf2mywk/IMG-20250722-WA0027.jpg" data-aos="zoom-in" alt="1">
-      <img src="https://i.postimg.cc/vT0tj1Bz/IMG-20250722-WA0025.jpg" data-aos="zoom-in" data-aos-delay="100" alt="2">
-      <img src="https://i.postimg.cc/tCmzNV8R/IMG-20250722-WA0024.jpg" data-aos="zoom-in" data-aos-delay="200" alt="3">
-      <img src="https://i.postimg.cc/vHjWVw6c/IMG-20250722-WA0022.jpg" data-aos="zoom-in" data-aos-delay="300" alt="4">
-      <img src="https://i.postimg.cc/g0b8gysp/IMG-20250722-WA0021.jpg" data-aos="zoom-in" data-aos-delay="400" alt="5">
-      <img src="https://i.postimg.cc/JzZBHDL2/IMG-20250722-WA0013.jpg" data-aos="zoom-in" data-aos-delay="500" alt="6">
-      <img src="https://i.postimg.cc/pTwmdRSH/IMG-20250722-WA0008.jpg" data-aos="zoom-in" data-aos-delay="600" alt="7">
-      <img src="https://i.postimg.cc/N0Gmhs3C/IMG-20250722-WA0009.jpg" data-aos="zoom-in" data-aos-delay="700" alt="8">
-      <img src="https://i.postimg.cc/XNtfZ05X/IMG-20250722-WA0011.jpg" data-aos="zoom-in" data-aos-delay="800" alt="9">
+      <img src="IMG-20250722-WA0027.jpg" loading="lazy" data-aos="zoom-in">
+      <img src="IMG-20250722-WA0025.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="100">
+      <img src="IMG-20250722-WA0024.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="200">
+      <img src="IMG-20250722-WA0022.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="300">
+      <img src="IMG-20250722-WA0023.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="400">
+      <img src="IMG-20250722-WA0020.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="500">
+      <img src="IMG-20250722-WA0021.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="600">
+      <img src="IMG-20250722-WA0019.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="700">
+      <img src="IMG-20250722-WA0018.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="800">
+      <img src="IMG-20250722-WA0016.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="900">
+      <img src="IMG-20250722-WA0017.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1000">
+      <img src="IMG-20250722-WA0015.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1100">
+      <img src="IMG-20250722-WA0014.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1200">
+      <img src="IMG-20250722-WA0012.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1300">
+      <img src="IMG-20250722-WA0013.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1400">
+      <img src="IMG-20250722-WA0008.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1500">
+      <img src="IMG-20250722-WA0007.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1600">
+      <img src="IMG-20250722-WA0005.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1700">
+      <img src="IMG-20250722-WA0006.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1800">
+      <img src="IMG-20250722-WA0009.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="1900">
+      <img src="IMG-20250722-WA0029.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="2000">
+      <img src="IMG-20250722-WA0011.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="2100">
+      <img src="IMG-20250722-WA0010.jpg" loading="lazy" data-aos="zoom-in" data-aos-delay="2200">
     </div>
   </section>
 
@@ -154,7 +152,6 @@
     <a class="btn-cta" href="https://wa.me/233550770772">💈 Book Now on WhatsApp</a>
   </div>
 
-  <!-- FOOTER -->
   <footer data-aos="fade-up">
     Amanfour Palace | Tamso New Road, Tarkwa<br>
     📱 +233 550 770 772<br>
